@@ -1,0 +1,25 @@
+.flexul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+h2{
+    text-transform: uppercase;
+}
+
+li{
+    text-transform: uppercase;
+}
+
+.lipopup{
+    cursor: pointer;
+    color: blue;
+}
+
+.closebtn{
+    cursor: pointer;
+    background-color: crimson;
+    padding: 5px;
+    margin-top: 20px;
+}

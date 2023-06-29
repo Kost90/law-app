@@ -1,25 +1,40 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.css'
+import { Routes, Route } from "react-router-dom";
+import Homepage from "./pages/Homepage";
+import Services from "./pages/services/Services";
+import Bookappointment from "./pages/Bookappointment";
+import Ourteame from "./pages/Ourteame";
+import Contactus from "./pages/Contactus";
+import NavBar from './components/NavBar';
+import Footer from './components/Footer';
+import { DataContextProvider } from './components/Context/UseContext';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+    
+<DataContextProvider>
+  <div>
+
+    <NavBar/>
+
+      <Routes>
+        <Route path="/" element={<Homepage/>}/>
+        <Route path="services" element={<Services/>}/>
+        <Route path="bookappointment" element={<Bookappointment/>}/>
+        <Route path="ourteame" element={<Ourteame/>}/>
+        <Route path="contactus" element={<Contactus/>}/>
+      </Routes>
+
+    <Footer/>
+
+
+  </div>
+</DataContextProvider>
+
+
+  )
 }
 
 export default App;

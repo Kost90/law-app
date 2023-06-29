@@ -1,0 +1,11 @@
+.popup {
+  position: fixed;
+  top: 200px;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+.popup__inner {
+  background-color: blue;
+  padding: 2rem;
+}
