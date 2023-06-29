@@ -7,14 +7,14 @@ import Ourteame from "./pages/Ourteame";
 import Contactus from "./pages/Contactus";
 import NavBar from './components/NavBar';
 import Footer from './components/Footer';
-import { DataContextProvider } from './components/Context/UseContext';
+import { DataProvider } from './components/Context/UseContext';
 
 
 function App() {
   return (
 
     
-<DataContextProvider>
+<DataProvider>
   <div>
 
     <NavBar/>
@@ -31,7 +31,7 @@ function App() {
 
 
   </div>
-</DataContextProvider>
+</DataProvider>
 
 
   )

@@ -1,15 +1,17 @@
-import { useContext } from "react"
-import { DataContext } from "../../components/Context/UseContext"
+import { useState } from "react"
 import styles from './Services.module.css'
 import { Formservices } from "../../components/Form/Formservices/Formservices"
 
 
 export default function Services() {
 
-  const {handleClose, handleOpen, open} = useContext(DataContext)
+    const [open, setOpen] = useState(false)
+
+    const handleOpen = () => setOpen(true)
+    const handleClose = () => setOpen(false)
 
   return (
-    <div className='flexcontainer'>
+    <div className={styles.flexcontainer}>
       <h2>Our Services:</h2>
       <ul className={styles.flexul}>
         <li>Civil law</li>
