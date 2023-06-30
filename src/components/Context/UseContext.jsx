@@ -48,7 +48,7 @@ export const DataProvider = ({ children }) => {
       <DataContext.Provider
         value={{
           bookdata,
-            addData,
+          addbookData,
             removeData,
         }}>
         {children}
