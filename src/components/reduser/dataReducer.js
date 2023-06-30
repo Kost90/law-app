@@ -4,7 +4,7 @@ export const dataReducer = (prevState, action) => {
   const { type, payload } = action
 
   switch (type) {
-    case dataActionsTypes.ADD_DATA:
+    case dataActionsTypes.ADD_BOOKDATA:
       return {
         users: [...prevState.data, payload.newData],
       }

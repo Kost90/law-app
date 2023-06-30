@@ -30,13 +30,13 @@ if (typeof context === 'undefined') {
 }
 
 export const DataProvider = ({ children }) => {
-    const [{ data }, dispatchUsers] = useReducer(dataReducer, {
-      data: initialData,
+    const [{ bookdata }, dispatchUsers] = useReducer(dataReducer, {
+      bookdata: initialData,
     })
   
-    const addData = newData => {
+    const addbookData = newData => {
       // fetch()
-      dispatchUsers({ type: dataActionsTypes.ADD_DATA, payload: { newData } })
+      dispatchUsers({ type: dataActionsTypes.ADD_BOOKDATA, payload: { newData } })
     }
   
     const removeData = dataId => {
@@ -47,9 +47,9 @@ export const DataProvider = ({ children }) => {
     return (
       <DataContext.Provider
         value={{
-            data,
+          bookdata,
             addData,
-          removeData,
+            removeData,
         }}>
         {children}
       </DataContext.Provider>
