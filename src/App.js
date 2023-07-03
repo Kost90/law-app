@@ -1,12 +1,12 @@
 import './App.css'
 import { Routes, Route } from "react-router-dom";
-import Homepage from "./pages/Homepage";
+import Homepage from './pages/Home_page/Homepage.jsx'
 import Services from "./pages/services/Services";
-import Bookappointment from "./pages/Bookappointment";
-import Ourteame from "./pages/Ourteame";
-import Contactus from "./pages/Contactus";
-import NavBar from './components/NavBar';
-import Footer from './components/Footer';
+import Bookappointment from './pages/Bookappointment/Bookappointment';
+import Ourteame from "./pages/Our_team/Ourteame";
+import Contactus from "./pages/Contact_us/Contactus";
+import NavBar from  './components/ui/navbar/NavBar'
+import Footer from  './components/ui/footer/Footer'
 import { DataProvider } from './components/Context/UseContext';
 
 

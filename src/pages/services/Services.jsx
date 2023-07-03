@@ -1,7 +1,6 @@
 import { useState } from "react"
 import styles from './Services.module.css'
-import { Formservices } from "../../components/Form/Formservices/Formservices"
-
+import { Formservices } from "../../components/ui/Form/Formservices/Formservices";
 
 export default function Services() {
 

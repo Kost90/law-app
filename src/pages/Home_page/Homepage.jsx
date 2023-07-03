@@ -1,8 +1,8 @@
 import React from 'react'
-import Servicescard from '../components/Servicescard';
-import Ourteamcard from '../components/Ourteamcard';
-import Bookappointmentcard from '../components/Bookappointmentcard';
-import Contactuscard from '../components/Contactuscard';
+import Servicescard from '../../components/ui/service_card/Servicescard'
+import Ourteamcard from '../../components/ui/our_team_card/Ourteamcard'
+import Bookappointmentcard from '../../components/ui/book_appointment_card/Book_appointment_card'
+import Contactuscard from '../../components/ui/Contact_us_card/Contact_us_card'
 
 
 export default function Homepage() {
