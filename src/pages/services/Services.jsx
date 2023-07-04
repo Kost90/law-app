@@ -1,8 +1,12 @@
 import { useState } from "react"
 import styles from './Services.module.css'
 import { Formservices } from "../../components/ui/Form/Formservices/Formservices";
+import Serviceresult from "../../components/ui/serviceresult/Serviceresult";
+import {useDataContext} from '../../components/Context/UseContext'
 
 export default function Services() {
+
+  const {data} = useDataContext()
 
     const [open, setOpen] = useState(false)
 
@@ -13,9 +17,7 @@ export default function Services() {
     <div className={styles.flexcontainer}>
       <h2>Our Services:</h2>
       <ul className={styles.flexul}>
-        <li>Civil law</li>
         <li>Corporate law</li>
-        <li>Family Law</li>
         <li>Property law</li>
         <li>Imigration law</li>
       </ul>
@@ -30,6 +32,7 @@ export default function Services() {
             </button>
           </div>
       )}
+      {data !== null && (<Serviceresult/>)}
     </div>
   )
 }

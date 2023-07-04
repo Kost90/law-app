@@ -1,27 +1,16 @@
 import { createContext, useContext, useReducer } from 'react'
-
 import { dataReducer } from '../reduser/dataReducer';
 import { dataActionsTypes } from '../reduser/dataActiontypes';
 
 export const DataContext = createContext()
 
-const initialData = [];
+const initialData = null;
 
 
 export const useDataContext = () => {
 
     const context = useContext(DataContext)
 
-    // const [open, setOpen] = useState(false)
-
-    // const handleOpen = () => setOpen(true)
-    // const handleClose = () => setOpen(false)
-
-//   return (
-//     <DataContext.Provider value={{ open, handleOpen, handleClose }}>
-//       {children}  
-//     </DataContext.Provider>
-//   )
 if (typeof context === 'undefined') {
     throw new Error('useDataContext must be used into DataProvider!')
   }
@@ -30,15 +19,18 @@ if (typeof context === 'undefined') {
 }
 
 export const DataProvider = ({ children }) => {
-    const [{ bookdata }, dispatchUsers] = useReducer(dataReducer, {
-      bookdata: initialData,
+  // Datareducer это фаил со свитчами которые будут выполнятся
+    const [{ data }, dispatchUsers] = useReducer(dataReducer, {
+      data: initialData,
     })
-  
+    
+    // Это функции которые передаем в datareducer и которые будут выполнятся в случае свопадения в кейсе
     const addbookData = newData => {
       // fetch()
       dispatchUsers({ type: dataActionsTypes.ADD_BOOKDATA, payload: { newData } })
     }
   
+    // dataActionstype фаил где перечисляются названия для кейсов
     const removeData = dataId => {
       // fetch()
       dispatchUsers({ type: dataActionsTypes.REMOVE_DATA, payload: { dataId } })
@@ -47,9 +39,9 @@ export const DataProvider = ({ children }) => {
     return (
       <DataContext.Provider
         value={{
-          bookdata,
+          data,
           addbookData,
-            removeData,
+          removeData,
         }}>
         {children}
       </DataContext.Provider>

@@ -12,7 +12,6 @@ import { DataProvider } from './components/Context/UseContext';
 
 function App() {
   return (
-
     
 <DataProvider>
   <div>

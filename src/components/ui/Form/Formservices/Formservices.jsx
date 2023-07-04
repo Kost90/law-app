@@ -1,46 +1,40 @@
-import React, { useContext } from 'react'
-import { v4 as uuidv4 } from 'uuid';
-import { useForm } from "react-hook-form"
+
+import { useForm, FormProvider} from "react-hook-form"
+import styles from './Formeservices.module.css'
+import Corporateradio from "./serviceRadio/Corporateradio";
+import Serviceselect from "./serviceSelect/Serviceselect";
+import Propertyradio from "./serviceRadio/Propertyradio";
+import Imigrationradio from "./serviceRadio/Imigrationradio";
+import {useDataContext} from '../../../Context/UseContext'
 
 export const Formservices = () => {
+  const {addbookData, data} = useDataContext()
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm({defaultValues:{
-    name: '',
-    phone: '',
-    id: uuidv4(),
-  },})
+  const methods = useForm({defaultValues:{
+    law: '',
+    service: ''
+  }});
+
+  const area = methods.watch('law')
 
   const onSubmit = (data) => {
-    console.log(data)
+    addbookData(data)
   }
 
+console.log(data)
+
   return (
-    <div>
-       <h1>CHOOSE SERVICE</h1>
-       <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
-          <label htmlFor="name">Enter your full name:</label>
-          <br />
-          <input type="text" {...register("name", { required: true})}/>
-          {errors.name && (
-          <div style={{color: 'red' }}>Enter your name</div>
-          )}
-        </div>
-        <br />
+    <FormProvider {...methods}>
       <div>
-      <label htmlFor="name">Enter your mobile number:</label>
-          <br />
-      <input type="number" {...register("phone", { minLength: 8, maxLength: 25 })}/>
-      {errors.phone && (
-          <div style={{color: 'red' }}>Enter your number</div>
-          )}
-      </div>
-        <input type="submit" />
+       <h1>CHOOSE SERVICE</h1>
+       <form onSubmit={methods.handleSubmit(onSubmit)}>
+      <Serviceselect/>
+      {area === 'corporate_law'&& (<Corporateradio/>)} 
+      {area === 'property_law'&& (<Propertyradio/>)} 
+      {area === 'imigration_law'&& (<Imigrationradio/>)} 
+      <input type="submit"/>
        </form>
     </div>
+    </FormProvider>
   )
 }

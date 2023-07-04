@@ -6,11 +6,11 @@ export const dataReducer = (prevState, action) => {
   switch (type) {
     case dataActionsTypes.ADD_BOOKDATA:
       return {
-        users: [...prevState.data, payload.newData],
+        data: payload.newData,
       }
     case dataActionsTypes.REMOVE_DATA:
       return {
-        users: prevState.data.filter(({ id }) => id !== payload.dataId),
+        data: prevState.data.filter(({ id }) => id !== payload.dataId),
       }
     default:
       break
