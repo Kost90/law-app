@@ -6,7 +6,7 @@ export default function Imigrationradio() {
   return (
     <>
 <label htmlFor="Make document for visa">
-    <input type="radio" value='Make document for visa' {...register("service", {required: true})}/>
+    <input type="radio" value='Make visa' {...register("service", {required: true})}/>
     Make document for visa
   </label>
   <label htmlFor="Continue visa">
@@ -14,7 +14,7 @@ export default function Imigrationradio() {
   Continue visa
   </label>
   <label htmlFor="Help with residence">
-  <input type="radio" value='Help with residence' {...register("service", {required: true})}/>
+  <input type="radio" value='Residence' {...register("service", {required: true})}/>
   Help with residence
   </label>
   {errors.law && (

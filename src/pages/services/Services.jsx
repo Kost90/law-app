@@ -17,12 +17,25 @@ export default function Services() {
     <div className={styles.flexcontainer}>
       <h2>Our Services:</h2>
       <ul className={styles.flexul}>
-        <li>Corporate law</li>
-        <li>Property law</li>
-        <li>Imigration law</li>
+        <li className={styles.flexli}>Corporate law:
+            <li>Create company</li>
+            <li>Remove company</li>
+            <li>Add owners</li>
+        </li>
+        <li className={styles.flexli}>Property law:
+        <li>Build new building</li>
+        <li>Building reconstruction</li>
+        <li>Help with sale your property building</li>
+        </li>
+        <li className={styles.flexli}>Imigration law:
+        <li>Make document for visa</li>
+        <li>Continue visa</li>
+        <li>Help with residence</li>
+        </li>
       </ul>
       <ul>
-      <li onClick={handleOpen} className={styles.lipopup}>Do you want to calculate the cost of the service</li>
+      <h3 className={styles.lipopup}>Do you want to calculate the cost of the service</h3>
+      <button type="button" onClick={handleOpen}>Press to calculate</button>
       </ul>
       {open && (
         <div>

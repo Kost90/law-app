@@ -1,4 +1,5 @@
 .flexcontainer{
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column; 
@@ -11,14 +12,31 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 25px;
+    gap: 200px;
 }
+
+.flexli{
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
 h2{
     text-transform: uppercase;
 }
 
 li{
-    text-transform: uppercase;
+    text-transform: none;
+    list-style: circle;
+    font-weight: normal;
+}
+
+ul{
+    padding: 0;
 }
 
 .lipopup{
@@ -31,4 +49,11 @@ li{
     background-color: crimson;
     padding: 5px;
     margin-top: 20px;
+}
+
+button{
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(163, 93, 232);
 }

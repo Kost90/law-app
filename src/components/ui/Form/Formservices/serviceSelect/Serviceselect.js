@@ -9,9 +9,9 @@ export default function Serviceselect() {
 <div>
       <select {...register('law', {required:true})}>
         <option value="" disabled>Choose law area</option>
-        <option value="corporate_law">Corporate law</option>
-        <option value="property_law">Property law</option>
-        <option value="imigration_law">Imigration law</option>
+        <option value="Corporate law">Corporate law</option>
+        <option value="Property law">Property law</option>
+        <option value="Imigration law">Imigration law</option>
       </select>
       {errors.law && (
           <div style={{color: 'red' }}>Choose law area</div>)}

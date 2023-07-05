@@ -14,7 +14,7 @@ export default function Propertyradio() {
   Building reconstruction
   </label>
   <label htmlFor="Building sale">
-  <input type="radio" value='Building sale' {...register("service", {required: true})}/>
+  <input type="radio" value='Sale building' {...register("service", {required: true})}/>
   Building sale
   </label>
   {errors.law && (

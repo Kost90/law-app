@@ -6,15 +6,15 @@ export default function Corporateradio() {
   return (
     <>
 <label htmlFor="create-company">
-    <input type="radio" value='create-company' {...register("service", {required: true})}/>
+    <input type="radio" value='Create company' {...register("service", {required: true})}/>
     Create company
   </label>
-  <label htmlFor="remove-company">
-  <input type="radio" value='remove-company' {...register("service", {required: true})}/>
+  <label htmlFor="remove_company">
+  <input type="radio" value='Remove company' {...register("service", {required: true})}/>
   Remove company
   </label>
   <label htmlFor="add-new-owners">
-  <input type="radio" value='add-new-owners' {...register("service", {required: true})}/>
+  <input type="radio" value='Add owners' {...register("service", {required: true})}/>
   Add new owners to company
   </label>
   {errors.law && (

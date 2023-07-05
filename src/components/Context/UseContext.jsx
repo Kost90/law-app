@@ -19,18 +19,16 @@ if (typeof context === 'undefined') {
 }
 
 export const DataProvider = ({ children }) => {
-  // Datareducer это фаил со свитчами которые будут выполнятся
+
     const [{ data }, dispatchUsers] = useReducer(dataReducer, {
       data: initialData,
     })
     
-    // Это функции которые передаем в datareducer и которые будут выполнятся в случае свопадения в кейсе
     const addbookData = newData => {
       // fetch()
       dispatchUsers({ type: dataActionsTypes.ADD_BOOKDATA, payload: { newData } })
     }
   
-    // dataActionstype фаил где перечисляются названия для кейсов
     const removeData = dataId => {
       // fetch()
       dispatchUsers({ type: dataActionsTypes.REMOVE_DATA, payload: { dataId } })

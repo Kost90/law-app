@@ -19,20 +19,19 @@ export const Formservices = () => {
 
   const onSubmit = (data) => {
     addbookData(data)
+    methods.reset()
   }
-
-console.log(data)
 
   return (
     <FormProvider {...methods}>
-      <div>
-       <h1>CHOOSE SERVICE</h1>
-       <form onSubmit={methods.handleSubmit(onSubmit)}>
+      <div className={styles.flex_Container}>
+       <h1>CHOOSE SERVICE:</h1>
+       <form onSubmit={methods.handleSubmit(onSubmit)} className={styles.flex_Container}>
       <Serviceselect/>
-      {area === 'corporate_law'&& (<Corporateradio/>)} 
-      {area === 'property_law'&& (<Propertyradio/>)} 
-      {area === 'imigration_law'&& (<Imigrationradio/>)} 
-      <input type="submit"/>
+      {area === 'Corporate law'&& (<Corporateradio/>)} 
+      {area === 'Property law'&& (<Propertyradio/>)} 
+      {area === 'Imigration law'&& (<Imigrationradio/>)} 
+      <button type="submit">Calculate</button>
        </form>
     </div>
     </FormProvider>
