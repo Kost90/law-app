@@ -1,0 +1,49 @@
+.hamburger{
+    display:none;
+}
+
+.openHamburger{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    top:-175px;
+    gap: 10px;
+    animation: hamburger 2s ease 0.8ms;
+    animation-fill-mode: forwards;
+    width: 100%;
+}
+
+@keyframes hamburger{
+   from {top: -175px}
+    to{ top: 0;
+        background-color: aliceblue;}
+}
+
+
+.closeHamburger{
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: -175px;
+}
+
+li{
+    display: inline-block;
+}
+
+
+@media (max-width: 767px){
+    .hamburger{
+        display: flex;
+        position: fixed;
+        padding: 10px;
+        margin: 10px;
+        top: 0;
+        right: 10;
+    }
+
+
+}
+

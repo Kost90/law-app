@@ -1,45 +1,37 @@
-body{
-  text-align: center;
-}
-
-header{
-  margin: 50px;
-  background-color: coral;
-  padding: 50px;
-}
-
-a{
-  margin: 5px;
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
   text-decoration: none;
-  text-transform: uppercase;
+  vertical-align: baseline;
+  box-sizing: border-box;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+  line-height: inherit;
 }
 
-li{
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
   list-style: none;
 }
 
-.flexcontainer{
-  display: flex;
-  justify-content: center;
-  flex-direction: column; 
-  align-items: center;
-  border: 1px solid red;
-  padding: 50px;
+blockquote, q {
+  quotes: none;
 }
 
-.flexrow{
-  display: flex;
-    justify-content: center;
-    align-items: baseline;
-    flex-direction: row;
-    gap: 50px;
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
 }
 
-.border{
-  border: 1px solid red;
-  padding: 50px;
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
-.background{
-  background-color: cornflowerblue;
-}
+/*# sourceMappingURL=reset.css.map */
