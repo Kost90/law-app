@@ -1,10 +1,10 @@
-import React from 'react'
+import styles from './Servicescard.module.css'
 
 function Servicescard() {
   return (
-    <div>
+    <div className={styles.flex_container}>
     <h2>Our Services:</h2>
-    <ul>
+    <ul className={styles.flex_container_ul}>
       <li>Corporate law</li>
       <li>Property law</li>
       <li>Imigration law</li>

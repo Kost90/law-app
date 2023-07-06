@@ -4,8 +4,8 @@ import styles from './Footer.module.css'
 export default function Footer() {
   return (
     <footer>
-            <div>
-              <ul className={styles.footercontainer}>
+            <div className={styles.flex_container}>
+              <ul className={styles.flex_container_ul}>
                 <li>Email:kostdonc90@gmail.com</li>
                 <li>Phone number: 380637306501</li>
                 <li>Adrees: United Kingdom, Londoon</li>

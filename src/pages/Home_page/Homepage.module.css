@@ -1,0 +1,23 @@
+@media (max-width: 767px){
+    .background{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .flexrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    }
+
+}
+

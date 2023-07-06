@@ -7,8 +7,9 @@ footer{
     justify-content: center;
     left: 50%;
     transform: translate(-50%);
-    background-color: green;
+    background-color: rgb(7, 7, 24);
     padding: 20px;
+    color: rgb(255, 149, 0);
   }
   
   .footercontainer{
@@ -16,4 +17,22 @@ footer{
       justify-content: center;
       align-items: center;
       gap: 150px;
+  }
+
+  @media (max-width: 767px){
+    .flex_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    }
+
+    .flex_container_ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        }
   }
