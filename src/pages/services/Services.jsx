@@ -18,19 +18,25 @@ export default function Services() {
       <h2>Our Services:</h2>
       <ul className={styles.flexul}>
         <li className={styles.flexli}>Corporate law:
-            <li>Create company</li>
-            <li>Remove company</li>
-            <li>Add owners</li>
+        <ul className={styles.flexli}>
+        <li>Create company</li>
+        <li>Remove company</li>
+        <li>Add owners</li>
+        </ul>
         </li>
         <li className={styles.flexli}>Property law:
+        <ul className={styles.flexli}>
         <li>Build new building</li>
         <li>Building reconstruction</li>
         <li>Help with sale your property building</li>
+        </ul>
         </li>
         <li className={styles.flexli}>Imigration law:
+        <ul className={styles.flexli}>
         <li>Make document for visa</li>
         <li>Continue visa</li>
         <li>Help with residence</li>
+        </ul>
         </li>
       </ul>
       <ul>

@@ -1,13 +1,16 @@
 import { createContext, useContext, useReducer, useState } from "react";
 import { dataReducer } from "../reduser/dataReducer";
 import { dataActionsTypes } from "../reduser/dataActiontypes";
-import { addContact } from "../../api/Contactsapi";
+import {
+  addContact,
+  deleteContact,
+  addComments,
+  deleteComment,
+} from "../../api/Contactsapi";
 
 export const DataContext = createContext();
 
 const initialData = null;
-
-const contactData = [];
 
 export const useDataContext = () => {
   const context = useContext(DataContext);
@@ -20,41 +23,63 @@ export const useDataContext = () => {
 };
 
 export const DataProvider = ({ children }) => {
-  const [contactstate, setcontactstate] = useState(contactData);
-
-  console.log(contactstate);
+  const [contactstate, setcontactstate] = useState([]);
+  const [commentState, setCommentState] = useState([]);
+  const [open, setOpen] = useState(false);
 
   const postContact = (contact) => {
-    addContact(contact)
+    addContact(contact);
 
     setcontactstate((prev) => [...prev, contact]);
   };
 
+  const postComment = (comment) => {
+    addComments(comment);
+
+    setCommentState((prev) => [...prev, comment]);
+  };
+
+  const onDeleteContact = (id, element) => {
+    deleteContact(id);
+    setcontactstate((prev) =>
+      prev.filter((contact) => contact.delete !== element)
+    );
+  };
+
+  const onDeleteComment = (id, element) => {
+    deleteComment(id);
+    setCommentState((prev) =>
+      prev.filter((comment) => comment.delete !== element)
+    );
+  };
+
+  // =========================REDUCER===========================================//
   const [{ data }, dispatchUsers] = useReducer(dataReducer, {
     data: initialData,
   });
 
   const addbookData = (newData) => {
-    // fetch()
     dispatchUsers({
       type: dataActionsTypes.ADD_BOOKDATA,
       payload: { newData },
     });
   };
 
-  const removeData = (dataId) => {
-    // fetch()
-    dispatchUsers({ type: dataActionsTypes.REMOVE_DATA, payload: { dataId } });
-  };
-
   return (
     <DataContext.Provider
       value={{
         data,
+        commentState,
+        setCommentState,
+        setcontactstate,
         contactstate,
         postContact,
+        postComment,
         addbookData,
-        removeData,
+        onDeleteContact,
+        onDeleteComment,
+        open,
+        setOpen,
       }}
     >
       {children}
