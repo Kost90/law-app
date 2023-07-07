@@ -43,7 +43,6 @@ export default function Services() {
       <ul>
       <h3 className={styles.lipopup}>Do you want to calculate the cost of the service</h3>
       <Button color="primary" variant="contained" onClick={handleOpen} size="small">Press to calculate</Button>
-      {/* <button type="button" onClick={handleOpen}>Press to calculate</button> */}
       </ul>
       {open && (
         <div>

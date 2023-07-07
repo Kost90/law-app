@@ -3,6 +3,7 @@ import ChatWindow from "../../components/ui/ChatWindow/ChatWindow";
 import FormChat from "../../components/ui/Form/FormChat/FormChat";
 import { urlComments } from "../../api/Contactsapi";
 import { useEffect } from "react";
+import styles from './Chat_page.module.css'
 
 function ChatPage() {
   const { onDeleteComment, commentState, setCommentState } = useDataContext();
@@ -20,17 +21,17 @@ function ChatPage() {
 
   
   return (
-    <>
-      <div>LEAVE YOUR MESSAGE</div>
+    <div className={styles.flex_container}>
+    <h1>LEAVE YOUR MESSAGE</h1>
       {commentState.length === 0 ? (
         <FormChat />
       ) : (
         <>
-          <ChatWindow data={commentState} onDeleteComment={onDeleteComment} />
           <FormChat />
+          <ChatWindow data={commentState} onDeleteComment={onDeleteComment} />
         </>
       )}
-    </>
+      </div>
   );
 }
 
