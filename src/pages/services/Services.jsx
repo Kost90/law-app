@@ -1,4 +1,5 @@
 import { useState } from "react"
+import Button from '@mui/material/Button';
 import styles from './Services.module.css'
 import { Formservices } from "../../components/ui/Form/Formservices/Formservices";
 import Serviceresult from "../../components/ui/serviceresult/Serviceresult";
@@ -41,14 +42,13 @@ export default function Services() {
       </ul>
       <ul>
       <h3 className={styles.lipopup}>Do you want to calculate the cost of the service</h3>
-      <button type="button" onClick={handleOpen}>Press to calculate</button>
+      <Button color="primary" variant="contained" onClick={handleOpen} size="small">Press to calculate</Button>
+      {/* <button type="button" onClick={handleOpen}>Press to calculate</button> */}
       </ul>
       {open && (
         <div>
             <Formservices/>
-            <button className={styles.closebtn} type="button" onClick={handleClose}>
-              Close form
-            </button>
+            <Button color="error" variant="outlined" onClick={handleClose} size="small">Close form</Button>
           </div>
       )}
       {data !== null && (<Serviceresult/>)}

@@ -1,6 +1,3 @@
-.hamburger {
-  display: none;
-}
 
 .openHamburger {
   position: absolute;
@@ -38,11 +35,18 @@
   top: -175px;
 }
 
-li {
+.closeHamburger li {
   display: inline-block;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
-@media (max-width: 767px) {
+.closeHamburger li:hover{
+  color: rgb(255, 136, 0);
+  transition: 0.5s;
+}
+
   .hamburger {
     display: flex;
     position: fixed;
@@ -52,4 +56,39 @@ li {
     right: 10;
     z-index: 5;
   }
+
+
+@media (min-width: 768px){
+  .hamburger {
+    display: none;
+  }
+
+  .closeHamburger{
+    display:flex;
+    justify-content: space-around;
+    padding: 20px;
+    position:relative;
+    top: 0;
+  }
+
+}
+
+@media (min-width: 1024px){
+  .hamburger {
+    display: none;
+  }
+
+  .closeHamburger{
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+    position:relative;
+    top: 0;
+    gap: 25px;
+  }
+
+  .closeHamburger li {
+    font-size: 20px;
+  }
+
 }

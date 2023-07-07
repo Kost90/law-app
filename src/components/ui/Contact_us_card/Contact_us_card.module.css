@@ -1,11 +1,20 @@
-@media (max-width: 767px){
+
     .flex_container{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        gap: 10px;
+        gap: 20px;
         border: 1px solid red;
         padding: 10px;
     }
-}
+
+    @media (min-width:768px){
+        .flex_container{
+            border: none;
+        }
+
+        .flex_container h2{
+            font-size: 16px;
+        }
+    }

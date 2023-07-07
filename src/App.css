@@ -12,19 +12,34 @@
   line-height: inherit;
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -34,12 +49,19 @@ table {
   border-spacing: 0;
 }
 
-@media (max-width:767px){
-  header{
-    display: block;
-    background-color: rgb(29 29 74);
-    width: 100%;
-    height: 50px;
+header {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgb(29 29 74);
+  width: 100%;
+  height: 50px;
+}
+
+@media (min-width: 768px) {
+  header {
+    justify-content: center;
   }
 }
 

@@ -16,7 +16,7 @@ function App() {
   return (
     
 <DataProvider>
-  <div>
+  <div className='body'>
 
     <NavBar/>
 

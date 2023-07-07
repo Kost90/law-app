@@ -1,4 +1,4 @@
-@media (max-width: 767px){
+
     .flex_container{
         display: flex;
         justify-content: center;
@@ -16,4 +16,21 @@
         flex-direction: column;
         gap: 10px;
     }
-}
+
+    @media (min-width:768px){
+        .flex_container{
+            border: none;
+        }
+
+        .flex_container h2{
+            font-size: 16px;
+        }
+
+        .flex_container_ul{
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
