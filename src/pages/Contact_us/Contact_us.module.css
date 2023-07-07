@@ -1,0 +1,13 @@
+.flex_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.flex_container h2{
+    justify-content: 14px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}

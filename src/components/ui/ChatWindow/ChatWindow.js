@@ -5,7 +5,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 export default function ChatWindow({ data, onDeleteComment }) {
   return (
     <div className={styles.flex_container_chatwindow}>
-      <h1>YOUR MESSAGES:</h1>
+      <h1>QUESTIONS:</h1>
       {data.map((element) => (
         <div key={element.id} className={styles.message_container}>
           <h3>Customer name:</h3>

@@ -1,6 +1,7 @@
 import { useForm} from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
 import { useDataContext } from "../../../Context/UseContext";
+import styles from './Formcontact.module.css'
 
 export default function FormContact() {
 
@@ -28,7 +29,7 @@ export default function FormContact() {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={handleSubmit(onSubmit)} className={styles.flex_container_form}>
     <div>
       <label htmlFor="name">Enter your full name:</label>
       <br />
@@ -60,7 +61,7 @@ export default function FormContact() {
         {...register("comment", { required: true })}
       ></textarea>
     </div>
-    <input type="submit" />
+    <button type="submit">SEND</button>
   </form>
   )
 }

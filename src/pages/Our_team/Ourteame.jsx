@@ -1,10 +1,10 @@
-import React from 'react'
+import styles from './Our_team.module.css'
 
 export default function Ourteame() {
   return (
-    <div className='border'>
+    <div className={styles.flex_container}>
       <h2>OUR TEAME:</h2>
-      <ul>
+      <ul className={styles.flex_container_ul}>
         <li>Mark</li>
         <li>Tim</li>
         <li>Ingus</li>

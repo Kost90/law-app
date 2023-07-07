@@ -22,7 +22,7 @@ function ChatPage() {
   
   return (
     <div className={styles.flex_container}>
-    <h1>LEAVE YOUR MESSAGE</h1>
+    <h1>LEAVE YOUR QUESTION</h1>
       {commentState.length === 0 ? (
         <FormChat />
       ) : (
