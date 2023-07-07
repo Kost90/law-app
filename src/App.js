@@ -7,7 +7,9 @@ import Ourteame from "./pages/Our_team/Ourteame";
 import Contactus from "./pages/Contact_us/Contactus";
 import ChatPage from './pages/Chat_page/ChatPage';
 import NavBar from  './components/ui/navbar/NavBar'
-import Footer from  './components/ui/footer/Footer'
+import Footer from  './components/ui/footer/Footer';
+import Login from './pages/Profile/Login';
+import Profile from './pages/Profile/Profile';
 import { DataProvider } from './components/Context/UseContext';
 
 
@@ -27,6 +29,7 @@ function App() {
         <Route path="chatpage" element={<ChatPage/>}/>
         <Route path="ourteame" element={<Ourteame/>}/>
         <Route path="contactus" element={<Contactus/>}/>
+        <Route path="profile" element={<Profile/>}/>
       </Routes>
 
     <Footer/>

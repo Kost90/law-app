@@ -20,6 +20,7 @@ function NavBar() {
         <li><Link to="chatpage">Online consultation</Link></li>
         <li><Link to="ourteame">Our Teame</Link></li>
         <li><Link to="contactus">Contact us</Link></li>  
+        <li><Link to="profile">Profile</Link></li>  
       </ul>
       <div className={styles.hamburger} onClick={toggleHamburger}>
       <Hamburger isOpen={isOpen}/>
