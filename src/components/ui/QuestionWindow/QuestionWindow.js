@@ -1,8 +1,13 @@
 import styles from "./QuestionWindow.module.css";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
+import useDataContext from "../../Context/UseContext";
+import Formedit from "../Form/Formedit/Formedit";
+
 
 export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
+
+  const {open, setOpen} = useDataContext()
 
   const loginName = logindata.name;
 
@@ -27,6 +32,8 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
           >
             Delete
           </Button>
+          <button type="button" onClick={() => setOpen(true)}>Edit messagge</button>
+          {open?<Formedit id={element.id}/>:null}
         </div>
       )) :questionData.map((element) => (
         <div key={element.id} className={styles.message_container}>
@@ -43,8 +50,11 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
           >
             Delete
           </Button>
+          <button type="button" onClick={() => setOpen(true)}>Edit messagge</button>
+          {open?<Formedit id={element.id}/>:null}
         </div>
       ))}
+ 
     </div>
   );
 }

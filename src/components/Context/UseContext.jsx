@@ -5,6 +5,7 @@ import {
   addReview,
   addComments,
   deleteComment,
+  editComments,
 } from "../../api/Contactsapi";
 
 export const DataContext = createContext();
@@ -32,6 +33,16 @@ export const DataProvider = ({ children }) => {
 
     setCommentState((prev) => [...prev, comment]);
   };
+
+  const editComment = (newcomment) =>{
+    setCommentState(prevComment =>{
+      const index = prevComment.findIndex(comment => comment.id === newcomment.id)
+      const prevCommentcopy = [...prevComment]
+      prevCommentcopy[index] = newcomment
+      return prevCommentcopy
+    })
+    editComments(newcomment)
+  }
 
   const postReview = (review) => {
     addReview(review);
@@ -69,6 +80,7 @@ export const DataProvider = ({ children }) => {
         review,
         setReview,
         postComment,
+        editComment,
         postReview,
         addbookData,
         onDeleteComment,

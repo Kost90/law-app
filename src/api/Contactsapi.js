@@ -18,6 +18,14 @@ export const addComments = async (comment) => {
   });
 };
 
+export const editComments = async (newcomment) => {
+  return await fetch(`${urlComments}/${newcomment.id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(newcomment),
+  });
+};
+
 export const addReview = async (review) => {
   return await fetch(urlreview, {
     method: "POST",
