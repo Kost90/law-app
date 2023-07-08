@@ -1,29 +1,13 @@
-import { useEffect } from "react";
 
-export const urlContact =
-  "https://64a5872d00c3559aa9bfdad8.mockapi.io/law-app/law-app";
 export const urlComments =
-  "https://64a5872d00c3559aa9bfdad8.mockapi.io/law-app/comments";
-
-
-export const getContacts = async () => {
-  const response = await fetch(urlContact);
-
-  return await response.json();
-};
+  "https://64a5872d00c3559aa9bfdad8.mockapi.io/law-app/question";
+export const urlreview = 
+'https://64a5872d00c3559aa9bfdad8.mockapi.io/law-app/review';
 
 export const getComments = async () => {
   const response = await fetch(urlComments);
 
   return await response.json();
-};
-
-export const addContact = async (contact) => {
-  return await fetch(urlContact, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(contact),
-  });
 };
 
 export const addComments = async (comment) => {
@@ -34,11 +18,20 @@ export const addComments = async (comment) => {
   });
 };
 
-export const deleteContact = async (id) => {
-  await fetch(`${urlContact}/${id}`, {
-    method: "DELETE",
+export const addReview = async (review) => {
+  return await fetch(urlreview, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(review),
   });
 };
+
+export const getReviews = async () => {
+  const response = await fetch(urlreview);
+
+  return await response.json();
+};
+
 
 export const deleteComment = async (id) => {
   await fetch(`${urlComments}/${id}`, {

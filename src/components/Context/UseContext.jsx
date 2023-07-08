@@ -2,8 +2,8 @@ import { createContext, useContext, useReducer, useState } from "react";
 import { dataReducer } from "../reduser/dataReducer";
 import { dataActionsTypes } from "../reduser/dataActiontypes";
 import {
-  addContact,
-  deleteContact,
+  addReview,
+  getReviews,
   addComments,
   deleteComment,
 } from "../../api/Contactsapi";
@@ -23,15 +23,10 @@ export const useDataContext = () => {
 };
 
 export const DataProvider = ({ children }) => {
-  const [contactstate, setcontactstate] = useState([]);
   const [commentState, setCommentState] = useState([]);
+  const [review, setReview] = useState([]);
+  const [loginname, setLoginname] = useState('');
   const [open, setOpen] = useState(false);
-
-  const postContact = (contact) => {
-    addContact(contact);
-
-    setcontactstate((prev) => [...prev, contact]);
-  };
 
   const postComment = (comment) => {
     addComments(comment);
@@ -39,11 +34,10 @@ export const DataProvider = ({ children }) => {
     setCommentState((prev) => [...prev, comment]);
   };
 
-  const onDeleteContact = (id, element) => {
-    deleteContact(id);
-    setcontactstate((prev) =>
-      prev.filter((contact) => contact.delete !== element)
-    );
+  const postReview = (review) => {
+    addReview(review);
+
+    setReview((prev) => [...prev, review]);
   };
 
   const onDeleteComment = (id, element) => {
@@ -71,12 +65,15 @@ export const DataProvider = ({ children }) => {
         data,
         commentState,
         setCommentState,
-        setcontactstate,
         contactstate,
+        loginname,
+        setLoginname,
+        review,
+        setReview,
         postContact,
         postComment,
+        postReview,
         addbookData,
-        onDeleteContact,
         onDeleteComment,
         open,
         setOpen,

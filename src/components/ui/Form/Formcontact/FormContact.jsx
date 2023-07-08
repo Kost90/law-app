@@ -1,11 +1,8 @@
 import { useForm} from "react-hook-form";
 import { v4 as uuidv4 } from "uuid";
-import { useDataContext } from "../../../Context/UseContext";
 import styles from './Formcontact.module.css'
 
 export default function FormContact() {
-
-  const { postContact } = useDataContext();
 
   const {
     register,
@@ -23,7 +20,6 @@ export default function FormContact() {
   })
 
   const onSubmit = (data) => {
-    postContact(data)
     console.log(data)
     reset()
   }

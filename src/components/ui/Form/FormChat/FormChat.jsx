@@ -16,7 +16,7 @@ export default function FormChat() {
   } = useForm({
     defaultValues: {
       name: "",
-      comment: "",
+      text: "",
       delete: uuidv4(),
     },
   });
@@ -36,7 +36,7 @@ export default function FormChat() {
         <textarea
           cols="30"
           rows="10"
-          {...register("comment", { required: true })}
+          {...register("text", { required: true })}
         ></textarea>
       <Button type="submit" variant="contained" size="large" endIcon={<SendIcon />}>
   Send

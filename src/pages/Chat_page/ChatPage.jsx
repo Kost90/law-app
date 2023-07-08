@@ -1,5 +1,4 @@
 import useDataContext from "../../components/Context/UseContext";
-import ChatWindow from "../../components/ui/ChatWindow/ChatWindow";
 import FormChat from "../../components/ui/Form/FormChat/FormChat";
 import { urlComments } from "../../api/Contactsapi";
 import { useEffect } from "react";
@@ -28,7 +27,6 @@ function ChatPage() {
       ) : (
         <>
           <FormChat />
-          <ChatWindow data={commentState} onDeleteComment={onDeleteComment} />
         </>
       )}
       </div>
