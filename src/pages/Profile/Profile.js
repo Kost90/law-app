@@ -1,22 +1,18 @@
-import React, {useState} from 'react';
+
+import useDataContext from '../../components/Context/UseContext';
 import Login from './Login';
 import ProfilePage from './ProfilePage';
 
 function Profile() {
 
-    const [loggedOn, setLoggedOn] = useState(false);
+const { loginname } = useDataContext();
 
-    // login - name: save this in state that is accessible everywhere
-        //input, button
-
-    // profile -  get that name and then grab all commments that match that name
-        //comment
 
   return (
     <div>
-        {loggedOn ?
+        {loginname !== '' ?
             <ProfilePage/> :
-            <Login setLoggedOn={setLoggedOn}/>
+            <Login/>
         }
 
     </div>

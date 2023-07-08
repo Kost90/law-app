@@ -1,10 +1,11 @@
 import useDataContext from "../../components/Context/UseContext";
 import { v4 as uuidv4 } from "uuid";
-import { useForm} from "react-hook-form";
+import { useForm } from "react-hook-form";
+import Button from "@mui/material/Button";
+import SendIcon from "@mui/icons-material/Send";
 
-function Login({setLoggedOn}) {
-    
-const {setLoginname} = useDataContext()
+function Login() {
+  const { setLoginname } = useDataContext();
 
   const {
     register,
@@ -16,14 +17,30 @@ const {setLoginname} = useDataContext()
       name: "",
       logout: uuidv4(),
     },
-  })
+  });
 
+  const onSubmit = (data) => {
+    setLoginname(data);
+    reset();
+  };
 
   return (
-    <div>
-        <button onClick={() => setLoggedOn(true)}>Login</button>
-    </div>
-  )
+    <form onSubmit={handleSubmit(onSubmit)}>
+      <label htmlFor="name">Enter your full name:</label>
+      <br />
+      <input type="text" {...register("name", { required: true })} />
+      {errors.name && <div style={{ color: "red" }}>Enter your name</div>}
+      <br />
+      <Button
+        type="submit"
+        variant="contained"
+        size="large"
+        endIcon={<SendIcon />}
+      >
+        Login
+      </Button>
+    </form>
+  );
 }
 
-export default Login
+export default Login;

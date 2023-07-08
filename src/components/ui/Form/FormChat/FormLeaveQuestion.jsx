@@ -27,7 +27,9 @@ export default function FormChat() {
   };
 
   return (
-  <form onSubmit={handleSubmit(onSubmit)} className={styles.flex_container_form}>
+    <div>
+      <h1>LEAVE YOUR MESSAGE</h1>
+      <form onSubmit={handleSubmit(onSubmit)} className={styles.flex_container_form}>
         <label htmlFor="name">Enter your full name:</label>
         <br />
         <input type="text" {...register("name", { required: true })} />
@@ -42,5 +44,7 @@ export default function FormChat() {
   Send
 </Button>
     </form>
+    </div>
+
   );
 }

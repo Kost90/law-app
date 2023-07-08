@@ -3,7 +3,6 @@ import { dataReducer } from "../reduser/dataReducer";
 import { dataActionsTypes } from "../reduser/dataActiontypes";
 import {
   addReview,
-  getReviews,
   addComments,
   deleteComment,
 } from "../../api/Contactsapi";
