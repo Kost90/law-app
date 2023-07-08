@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { getComments } from '../../api/Contactsapi'
 import FormChat from '../../components/ui/Form/FormChat/FormChat';
-import QuestionsWindow from '../../components/ui/QuestionWindow/QuestionsWindow';
+import QuestionWindow from '../../components/ui/QuestionWindow/QuestionWindow'
 import useDataContext from '../../components/Context/UseContext';
 
 function ProfilePage() {
@@ -28,7 +28,7 @@ function ProfilePage() {
   return (
     <>
     <FormChat/>
-    <QuestionsWindow 
+    <QuestionWindow 
     data={commentState}
     onDeleteComment={onDeleteComment}
     logindata={loginname}

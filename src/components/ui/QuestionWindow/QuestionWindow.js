@@ -1,4 +1,4 @@
-import styles from "./ChatWindow.module.css";
+import styles from "./QuestionWindow.module.css";
 import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 
@@ -7,6 +7,8 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
   const loginName = logindata;
 
   const questionData = data.filter((q) => q.name === loginName)
+
+  console.log(data)
   
   return (
     <div className={styles.flex_container_chatwindow}>
