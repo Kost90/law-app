@@ -2,8 +2,9 @@ import {useState} from 'react';
 import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css'
 import Hamburger from '../Hamburgermenu/Hamburger';
+import { memo } from 'react';
 
-function NavBar() {
+const NavBar = memo (() => {
 
   const [isOpen, setsiOpen] = useState(false)
 
@@ -27,6 +28,6 @@ function NavBar() {
       </div>
     </header>
   )
-}
+})
 
 export default NavBar

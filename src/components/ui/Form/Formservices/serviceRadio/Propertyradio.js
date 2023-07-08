@@ -1,7 +1,8 @@
 import React from 'react'
 import { useFormContext } from "react-hook-form";
+import { memo } from 'react'
 
-export default function Propertyradio() {
+const Propertyradio = memo (() => {
     const {register, formState: { errors },} = useFormContext()
   return (
     <>
@@ -21,4 +22,6 @@ export default function Propertyradio() {
     <div style={{color: 'red' }}>Choose service</div>)}
     </>
   )
-}
+})
+
+export default Propertyradio

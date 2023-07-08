@@ -1,7 +1,8 @@
 import React from 'react'
 import { useFormContext } from "react-hook-form";
+import { memo } from 'react';
 
-export default function Serviceselect() {
+const Serviceselect = memo(() => {
     const {register, formState: { errors },} = useFormContext()
 
   return (
@@ -18,6 +19,8 @@ export default function Serviceselect() {
       </div>
     </>
   )
-}
+})
+
+export default Serviceselect
 
  

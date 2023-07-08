@@ -4,8 +4,9 @@ import SendIcon from "@mui/icons-material/Send";
 import { v4 as uuidv4 } from "uuid";
 import useDataContext from "../../../Context/UseContext";
 import styles from './Formedit.module.css'
+import { memo } from 'react'
 
-function Formedit({id}) {
+const Formedit = memo (({id}) => {
   const { editComment, setOpen } = useDataContext();
 
   const {
@@ -64,6 +65,6 @@ function Formedit({id}) {
       </form>
     </div>
   );
-}
+})
 
 export default Formedit;

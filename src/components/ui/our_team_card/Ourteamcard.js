@@ -1,6 +1,7 @@
-import styles from './Our_team_card.module.css'
+import styles from './Our_team_card.module.css';
+import { memo } from 'react';
 
-function Ourteamcard() {
+const Ourteamcard = memo (() => {
   return (
     <div className={styles.flex_container}>
       <h2>OUR TEAME:</h2>
@@ -15,6 +16,6 @@ function Ourteamcard() {
       </ul>
     </div>
   )
-}
+})
 
 export default Ourteamcard

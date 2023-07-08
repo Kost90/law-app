@@ -1,7 +1,8 @@
 import React from 'react'
 import { useFormContext } from "react-hook-form";
+import { memo } from 'react'
 
-export default function Corporateradio() {
+const Corporateradio = memo (() => {
     const {register, formState: { errors },} = useFormContext()
   return (
     <>
@@ -21,6 +22,8 @@ export default function Corporateradio() {
     <div style={{color: 'red' }}>Choose service</div>)}
     </>
   )
-}
+})
+
+export default Corporateradio
 
  

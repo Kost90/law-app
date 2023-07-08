@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Footer.module.css'
+import { memo } from 'react'
 
-export default function Footer() {
+const Footer = memo (() => {
   return (
     <footer>
             <div className={styles.flex_container}>
@@ -13,4 +14,6 @@ export default function Footer() {
             </div>
     </footer>
   )
-}
+})
+
+export default Footer

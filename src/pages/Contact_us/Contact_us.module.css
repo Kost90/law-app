@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: column;
     gap: 20px;
+    min-height: 400px;
 }
 
 .flex_container h2{

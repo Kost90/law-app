@@ -3,9 +3,10 @@ import Button from "@mui/material/Button";
 import DeleteIcon from "@mui/icons-material/Delete";
 import useDataContext from "../../Context/UseContext";
 import Formedit from "../Form/Formedit/Formedit";
+import { memo } from 'react';
 
 
-export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
+const QuestionsWindow = memo (({ data, onDeleteComment, logindata }) => {
 
   const {open, setOpen} = useDataContext()
 
@@ -69,4 +70,6 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
  
     </div>
   );
-}
+})
+
+export default QuestionsWindow

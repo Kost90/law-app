@@ -1,6 +1,7 @@
-import styles from './Servicescard.module.css'
+import styles from './Servicescard.module.css';
+import { memo } from 'react';
 
-function Servicescard() {
+const Servicescard = memo (() => {
   return (
     <div className={styles.flex_container}>
     <h2>Our Services:</h2>
@@ -11,6 +12,6 @@ function Servicescard() {
     </ul>
     </div>
   )
-}
+})
 
 export default Servicescard

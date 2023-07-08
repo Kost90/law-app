@@ -6,8 +6,9 @@ import Serviceselect from "./serviceSelect/Serviceselect";
 import Propertyradio from "./serviceRadio/Propertyradio";
 import Imigrationradio from "./serviceRadio/Imigrationradio";
 import { useDataContext } from "../../../Context/UseContext";
+import { memo } from 'react';
 
-export const Formservices = () => {
+export const Formservices = memo (() => {
   const { addbookData, data } = useDataContext();
 
   const methods = useForm({
@@ -44,4 +45,4 @@ export const Formservices = () => {
       </div>
     </FormProvider>
   );
-};
+});

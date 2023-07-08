@@ -1,6 +1,7 @@
 import {useDataContext} from '../../Context/UseContext'
 import { Link } from 'react-router-dom';
-import styles from './ServiceResult.module.css'
+import styles from './ServiceResult.module.css';
+import { memo } from 'react';
 
 const prices = {
   'Create company': 300,
@@ -16,7 +17,7 @@ const prices = {
 
 let price = '';
 
-export default function Serviceresult() {
+const Serviceresult = memo (() => {
 
 const {data} = useDataContext()
 
@@ -38,4 +39,6 @@ for (const [key, value] of Object.entries(prices)) {
         <button className={styles.button}><Link to="/bookappointment">Book appointment</Link></button>
     </div>
   )
-}
+})
+
+export default Serviceresult

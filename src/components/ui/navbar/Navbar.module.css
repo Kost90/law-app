@@ -7,7 +7,7 @@
   flex-direction: column;
   top: -175px;
   gap: 10px;
-  animation: hamburger 2s ease 0.8ms;
+  animation: hamburger 1.5s ease 0.8ms;
   animation-fill-mode: forwards;
   width: 100%;
   z-index: 4;
@@ -20,7 +20,7 @@
   }
   to {
     top: 0;
-    color: rgb(255, 136, 0);
+    color: rgb(232, 241, 241);
     background-color: rgb(9, 1, 38);
     -webkit-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.51);
     -moz-box-shadow: -1px 4px 5px 0px rgba(0, 0, 0, 0.51);

@@ -1,7 +1,8 @@
 import React from 'react'
 import styles from './Hamburgermenu.module.css'
+import { memo } from 'react';
 
-function Hamburger({isOpen}) {
+const Hamburger = memo (({isOpen}) =>{
 
   return (
     <div className={styles.hamburger_menu}>
@@ -10,6 +11,6 @@ function Hamburger({isOpen}) {
         <div className={isOpen?`${styles.burger} ${styles.burger_3}`:styles.burger}></div>
     </div>
   )
-}
+})
 
 export default Hamburger
