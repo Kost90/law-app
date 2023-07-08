@@ -3,16 +3,20 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 10px;
+    height: 100%;
+    min-height: 400px;
+    text-align: center;
+    gap: 20px;
 }
 
-.flex_container_ul{
+.flex_container_form{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5px;
+    height: 100%;
 }
+
 
 
 @media (min-width:1024px){

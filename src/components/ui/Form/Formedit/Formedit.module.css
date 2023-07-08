@@ -1,0 +1,28 @@
+.flex_container_edit{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: black;
+    top: 50%;
+}
+
+.flex_container_edit_form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 50px;
+    gap: 5px;
+    color: white;
+}
+
+.flex_container_edit_form textarea{
+    color: black;
+}
+
+.flex_container_edit_form input{
+    color: black;
+}

@@ -1,4 +1,4 @@
-
+import styles from './Profilepage.module.css'
 import useDataContext from '../../components/Context/UseContext';
 import Login from './Login';
 import ProfilePage from './ProfilePage';
@@ -9,7 +9,7 @@ const { loginname } = useDataContext();
 
 
   return (
-    <div>
+    <div className={styles.flex_container}>
         {loginname !== '' ?
             <ProfilePage/> :
             <Login/>

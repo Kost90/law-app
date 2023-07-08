@@ -3,6 +3,7 @@ import Button from "@mui/material/Button";
 import SendIcon from "@mui/icons-material/Send";
 import { v4 as uuidv4 } from "uuid";
 import useDataContext from "../../../Context/UseContext";
+import styles from './Formedit.module.css'
 
 function Formedit({id}) {
   const { editComment, setOpen } = useDataContext();
@@ -28,10 +29,10 @@ function Formedit({id}) {
   };
 
   return (
-    <div>
-      <h1>LEAVE YOUR MESSAGE</h1>
+    <div className={styles.flex_container_edit}>
       <form
         onSubmit={handleSubmit(onSubmit)}
+        className={styles.flex_container_edit_form}
       >
         <label htmlFor="name">Enter your full name:</label>
         <br />

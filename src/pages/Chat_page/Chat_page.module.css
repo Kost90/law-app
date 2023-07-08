@@ -33,6 +33,7 @@
         flex-direction: column;
         gap: 25px;
         margin: 50px auto;
+        min-height: 900px;
      }
 
      .flex_container h1{

@@ -32,7 +32,13 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
           >
             Delete
           </Button>
-          <button type="button" onClick={() => setOpen(true)}>Edit messagge</button>
+          <Button
+            color="success"
+            size="small"
+            onClick={() => setOpen(true)}
+          >
+            Edit messagge
+          </Button>
           {open?<Formedit id={element.id}/>:null}
         </div>
       )) :questionData.map((element) => (
@@ -50,7 +56,13 @@ export default function QuestionsWindow({ data, onDeleteComment, logindata }) {
           >
             Delete
           </Button>
-          <button type="button" onClick={() => setOpen(true)}>Edit messagge</button>
+          <Button
+            color="success"
+            size="small"
+            onClick={() => setOpen(true)}
+          >
+            Edit messagge
+          </Button>
           {open?<Formedit id={element.id}/>:null}
         </div>
       ))}
