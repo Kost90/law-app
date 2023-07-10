@@ -33,10 +33,8 @@ for (const [key, value] of Object.entries(prices)) {
         <p>Area of law: {data.law}</p>
         <p>Service you choosed: {data.service}</p>
         <p>Price start from: {price}$</p>
-        <h2>If you have a question:</h2>
-        <button className={styles.button}><Link to="/contactus">Contact us</Link></button>
         <h2>If you want to speake with our lawyer:</h2>
-        <button className={styles.button}><Link to="/bookappointment">Book appointment</Link></button>
+        <button className={styles.button}><Link to="/chatpage">Online consultation</Link></button>
     </div>
   )
 })

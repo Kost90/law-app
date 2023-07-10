@@ -13,7 +13,6 @@ export default function Homepage() {
         <div className={styles.flexrow}>
           
           <Servicescard/>
-          <Bookappointmentcard/>
           <Ourteamcard/>
           <Contactuscard/>
     

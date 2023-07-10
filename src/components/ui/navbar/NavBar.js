@@ -17,7 +17,6 @@ const NavBar = memo (() => {
       <ul className={isOpen ? styles.openHamburger: styles.closeHamburger}>
         <li><Link to="/">Home</Link></li>
         <li><Link to="services">Services</Link></li>
-        <li><Link to="bookappointment">Book appointment</Link></li>
         <li><Link to="chatpage">Online consultation</Link></li>
         <li><Link to="ourteame">Our Teame</Link></li>
         <li><Link to="contactus">Contact us</Link></li>  
